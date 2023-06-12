@@ -10,7 +10,7 @@
 
 void reversed(listint_t **head)
 {
-	listint_t *prev = NULL, *prev = NULL, *current = *head;
+	listint_t *next = NULL, *prev = NULL, *current = *head;
 
 	while (current)
 	{
