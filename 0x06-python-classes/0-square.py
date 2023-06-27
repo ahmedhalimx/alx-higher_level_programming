@@ -4,4 +4,5 @@
 
 
 class Square:
+    """a dummy class"""
     pass
