@@ -5,7 +5,7 @@
 def add_integer(a, b=98):
     """Return the integer addition of a and b.
 
-    Floats are typecasted to integrs before addition is performed.
+   Floats are typecasted to integrs before addition is performed.
 
     Raises:
         TypeError: If either of a or b isn't an integer or a float.
