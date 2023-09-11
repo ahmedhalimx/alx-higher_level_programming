@@ -1,23 +1,11 @@
 #!/usr/bin/node
-const argv = process.argv;
+let argv = process.argv;
 
-function second (Array) {
-  if (Array.length === 2 || Array.length === 3) {
-    return (0);
-  }
-
-  let max = Array[2];
-  let preMax = Array[3];
-
-  for (let i = 2; i < Array.length; i++) {
-    if (Array[i] > max) {
-      preMax = max;
-      max = Array[i];
-    } else if (Array[i] > preMax && Array[i] < max) {
-      preMax = Array[i];
-    }
-  }
-  return (preMax);
+if (argv.length <= 3) {
+  console.log(0);
+} else {
+   argv = argv.map(Number)
+    .slice(2, argv.length)
+    .sort((a, b) => a - b);
+  console.log(argv[argv.length - 2]);
 }
-
-console.log(second(argv));
