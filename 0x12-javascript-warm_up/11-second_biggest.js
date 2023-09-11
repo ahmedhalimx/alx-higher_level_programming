@@ -1,24 +1,23 @@
 #!/usr/bin/node
 const argv = process.argv;
 
-function second (array) {
-  if (array.length === 2 || array.length === 3) {
-	  return (0);
+function second (Array) {
+  if (Array.length === 2 || Array.length === 3) {
+    return (0);
   }
 
-  let max = array[2];
-  let previously_max = array[3];
+  let max = Array[2];
+  let preMax = Array[3];
 
-  for (let i = 2; i < array.length; i++) {
-    if (array[i] > max) {
-      previously_max = max;
-      max = array[i];
-    } else if (array[i] > previously_max && array[i] < max) {
-      previously_max = array[i];
+  for (let i = 2; i < Array.length; i++) {
+    if (Array[i] > max) {
+      preMax = max;
+      max = Array[i];
+    } else if (Array[i] > preMax && Array[i] < max) {
+      preMax = Array[i];
     }
   }
-
-  return (previously_max);
+  return (preMax);
 }
 
 console.log(second(argv));
