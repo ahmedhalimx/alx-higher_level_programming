@@ -2,7 +2,7 @@
 
 const list = require('./100-data').list;
 const newList = list.map(function (number, index) {
-	return number * index;
+  return number * index;
 });
 
 console.log(list);
