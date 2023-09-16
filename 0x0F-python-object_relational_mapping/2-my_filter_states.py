@@ -16,10 +16,9 @@ if __name__ == "__main__":
                          host='localhost',
                          port=3306)
     cursor = db.cursor()
-    instruction = f"SELECT * FROM states\
-            WHERE name LIKE BINARY '{sys.argv[4]}'\
-            ORDER BY id ASC"
-
+    instruction = """ SELECT * FROM states
+          WHERE name LIKE BINARY '{}'
+          ORDER BY id ASC """.format(sys.argv[4])
     cursor.execute(instruction)
     data = cursor.fetchall()
 
