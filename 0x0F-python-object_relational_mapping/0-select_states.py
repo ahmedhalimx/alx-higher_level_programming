@@ -1,5 +1,9 @@
 #!/usr/bin/python3
 
+"""
+    A script that lists all data from the database hbtn_0e_0_usa
+"""
+
 import sys
 import MySQLdb
 
