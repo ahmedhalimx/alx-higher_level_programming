@@ -9,8 +9,8 @@ import urllib.request
 
 if __name__ == "__main__":
     url = sys.argv[1]
-    email_string = {"email": sys.argv[2]}
-    email = urllib.parse.urlencode(email_string).encode("ascii")
+    value = {"email": sys.argv[2]}
+    email = urllib.parse.urlencode(value).encode("ascii")
 
     request = urllib.request.Request(url, email)
     with urllib.request.urlopen(request) as response:
